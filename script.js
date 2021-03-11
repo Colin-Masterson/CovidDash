@@ -5,13 +5,18 @@ window.onload = () =>{
     let date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
 
     headerDate.textContent = date
-    test()
+    fetchLatestCases()
+    fetchCountyCases(county)
 }
 
-let api =
+
+
+
+const fetchLatestCases = () =>{
+
+    let api =
   "https://services1.arcgis.com/eNO7HHeQ3rUcBllm/arcgis/rest/services/CovidStatisticsProfileHPSCIrelandOpenData/FeatureServer/0/query?where=1%3D1&outFields=Date,ConfirmedCovidCases,TotalConfirmedCovidCases,ConfirmedCovidDeaths,Male,Female,TotalCovidDeaths&outSR=4326&f=json";
 
-const test = () =>{
     fetch(api)
     .then((res) => res.json())
     .then((test) => test.features)
@@ -34,3 +39,39 @@ const test = () =>{
     });
 }
 
+const selecter = document.getElementById("counties");
+
+selecter.addEventListener("change", e =>{
+    let county = e.target.value
+    fetchCountyCases(county)
+})
+
+let county = "carlow"
+
+const fetchCountyCases = (c) =>{
+    let api = `https://services1.arcgis.com/eNO7HHeQ3rUcBllm/arcgis/rest/services/Covid19CountyStatisticsHPSCIreland/FeatureServer/0/query?where=CountyName%20%3D%20%27${c}%27&outFields=CountyName,ConfirmedCovidCases,ConfirmedCovidDeaths,TimeStamp&returnGeometry=false&outSR=4326&f=json`
+
+    fetch(api)
+    .then((res) => res.json())
+    .then((res) => res.features)
+    .then((res) => {
+        let yesterdaysInfoObject = res[res.length-2]
+        let todaysInfoObject = res[res.length-1]
+        let yesterdayArray = yesterdaysInfoObject.attributes
+        let todayArray = todaysInfoObject.attributes
+        let date = todayArray["TimeStamp"]
+
+        var date_string = new Date(date).toDateString();
+        let newCases = todayArray["ConfirmedCovidCases"] - yesterdayArray["ConfirmedCovidCases"]
+        let totalCases = todayArray["ConfirmedCovidCases"]
+
+        console.log(newCases)
+        console.log(totalCases)
+
+        document.querySelector(".latest-date-county").textContent = date_string
+        document.querySelector(".testcases").textContent = newCases
+        document.querySelector(".testtotal").textContent = totalCases
+
+        
+    })
+}
