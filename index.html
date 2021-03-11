@@ -4,20 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cssreset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cssreset.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Covid Dashboard</title>
   </head>
   <body>
-    
     <header>
       <a href="index.html" class="logo">Covid-19 Irish Cases</a>
       <a href="index.html" class="todays-date"></a>
     </header>
     <main>
-      <article class="data">
-        <h1>Total Irish Statstics</h1>
+      <article class="data daily">
+        <div class="data-header">
+        <h1>Total Irish Statistics</h1>
         <p class="latest-date">0</p>
+        </div>
         <div class="flex-container">
           <div class="data-box">
             <h2>Latest Cases</h2>
@@ -37,14 +43,18 @@
           </div>
         </div>
       </article>
-      <article class="data">
+      <article class="data county">
+        <div class="data-header">
         <h1>County By County</h1>
+        <div class="choose-county">
         <label for="counties">Choose a County:</label>
         <select id="counties">
           <option value="mayo">Mayo</option>
           <option value="donegal">Donegal</option>
         </select>
+      </div>
         <p class="latest-date">0</p>
+      </div>
         <div class="flex-container">
           <div class="data-box">
             <h2>New Cases</h2>
@@ -58,7 +68,7 @@
       </article>
     </main>
     <footer>
-      <p>Colin Masterson</p>
+      <p>&copy 2021 - Colin Masterson</p>
     </footer>
     <script src="script.js"></script>
   </body>
