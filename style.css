@@ -192,7 +192,7 @@ footer p{
         display: grid;
         margin-top: 20px;
         grid-template-columns: repeat(6,1fr);
-        grid-template-rows: repeat(4, 100px);
+        grid-template-rows: repeat(4, 80px);
         column-gap: 20px;
         row-gap: 10px;
         }
@@ -249,6 +249,10 @@ footer p{
 
         main{
             width: 90%;
+        }
+
+        .data-box{
+            text-align: center;
         }
 
 }
