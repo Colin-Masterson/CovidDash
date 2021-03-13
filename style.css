@@ -166,7 +166,6 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 footer a{
@@ -177,4 +176,5 @@ footer p{
     margin-top: 5px;
     color: #aaa;
     font-size: 13px;
+    text-align: center;
 }
