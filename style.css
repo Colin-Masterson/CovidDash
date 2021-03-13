@@ -76,8 +76,6 @@ margin-left: 8px;
 margin-left: 8px;
 }
 
-
-
 main{
     width: 70%;
     margin-left: auto;
@@ -183,6 +181,15 @@ footer p{
     text-align: center;
 }
 
+.latest-date{
+    font-weight: 750;
+}
+
+.latest-date-county{
+    font-weight: 750;
+}
+
+
 @media (max-width: 640px){
     header a{
         font-size: 20px;
@@ -254,5 +261,6 @@ footer p{
         .data-box{
             text-align: center;
         }
+
 
 }
