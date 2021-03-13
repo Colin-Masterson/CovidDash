@@ -18,8 +18,17 @@ h6 {
 	margin: 0 0 5px 0;
 }
 
+.page-container{
+    min-height: 100vh;
+    position: relative;
+}
+
 a {
 	text-decoration: none;
+}
+
+p{
+    margin: 0;
 }
 
 header{
@@ -43,13 +52,30 @@ header a{
 
 h1{
     font-weight: 400;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 h2{
-    font-weight: 450;
+    font-weight: 200;
     font-size: 18px;
 }
+
+.data-box p{
+    font-weight: 450;
+    font-size: 30px;
+   margin: 0;
+   display: inline-block;
+}
+
+.latest-cases p{
+margin-left: 8px;
+}
+
+.latest-deaths p{
+margin-left: 8px;
+}
+
+
 
 main{
     width: 70%;
@@ -61,14 +87,14 @@ main{
 .data{
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     padding: 15px 0 21px 0;
 }
 
 .daily{
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .data-header{
@@ -78,6 +104,7 @@ main{
 
 .grid-container{
 display: grid;
+margin-top: 20px;
 grid-template-columns: repeat(6,1fr);
 grid-template-rows: repeat(2, 80px);
 column-gap: 20px;
@@ -86,6 +113,7 @@ row-gap: 10px;
 
 .grid-container-county{
 display: grid;
+margin-top: 21px;
 grid-template-columns: repeat(6,1fr);
 grid-template-rows: 80px;
 column-gap: 20px;
@@ -126,25 +154,27 @@ grid-column: 2/4;
  grid-column: 4/6;
 }
 
-.page-container{
-    position: relative;
-    min-height: 100vh;
-}
+
 
 footer{
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
     height: 70px;
-    background-color: #999;
+    background-color: #f0f0f0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 
 }
 
+footer a{
+color: #4b4c4d;
+}
+
 footer p{
-    color: white;
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 13px;
 }

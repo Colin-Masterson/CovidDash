@@ -31,11 +31,11 @@ const fetchLatestCases = () =>{
   
       var date_string = new Date(date).toDateString();
   
-      document.querySelector(".latest-date").textContent = "Last Updated on " + date_string;
-      document.querySelector(".cases").textContent = cases;
-      document.querySelector(".deaths").textContent = deaths;
-      document.querySelector(".case-total").textContent = totalCases;
-      document.querySelector(".death-total").textContent = totalDeaths;
+      document.querySelector(".latest-date").innerHTML = `Last Updated on ${date_string}`;
+      document.querySelector(".cases").textContent = cases.toLocaleString();
+      document.querySelector(".deaths").textContent = deaths.toLocaleString();
+      document.querySelector(".case-total").textContent = totalCases.toLocaleString();
+      document.querySelector(".death-total").textContent = totalDeaths.toLocaleString();
     });
 }
 
@@ -68,9 +68,9 @@ const fetchCountyCases = (c) =>{
         console.log(newCases)
         console.log(totalCases)
 
-        document.querySelector(".latest-date-county").textContent = date_string
-        document.querySelector(".testcases").textContent = newCases
-        document.querySelector(".testtotal").textContent = totalCases
+        document.querySelector(".latest-date-county").textContent = `Last Updated on ${date_string}`
+        document.querySelector(".testcases").textContent = newCases.toLocaleString()
+        document.querySelector(".testtotal").textContent = totalCases.toLocaleString()
 
         
     })

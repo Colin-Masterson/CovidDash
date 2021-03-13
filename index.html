@@ -9,29 +9,30 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="cssreset.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Covid Dashboard</title>
+    <title>COVID-19 Data | Ireland</title>
   </head>
   <body class="page-container">
     <header>
-      <a href="index.html" class="logo">Covid-19 Irish Cases</a>
+      <a href="index.html" class="logo">COVID-19 Case Data - Ireland</a>
       <a href="index.html" class="todays-date"></a>
     </header>
     <main>
       <article class="data daily">
         <div class="data-header">
-        <h1>Total Irish Statistics</h1>
+        <h1>Ireland's Covid Cases</h1>
         <p class="latest-date"></p>
         </div>
         <div class="grid-container">
           <div class="data-box latest-cases">
             <h2>Latest Cases</h2>
-            <p class="cases"></p>
+            <i class="fas fa-calendar-check fa-2x"><p class="cases"></p></i>
           </div>
           <div class="data-box latest-deaths">
             <h2>Latest Deaths</h2>
-            <p class="deaths"></p>
+            <i class="fas fa-bed fa-2x"><p class="deaths"></p></i>
           </div>
           <div class="data-box total-cases">
             <h2>Total Cases</h2>
@@ -45,7 +46,7 @@
       </article>
       <article class="data county">
         <div class="data-header">
-        <h1>County By County</h1>
+        <h1>Cases By County</h1>
         <div class="choose-county">
         <label for="counties">Choose a County:</label>
         <select id="counties">
@@ -92,7 +93,8 @@
       </article>
     </main>
     <footer>
-      <p>&copy 2021 - Colin Masterson</p>
+     <a href="">Data Source</a>
+     <p>Irish data sourced live from the COVID-19 Open Data Hub provided by the Government of Ireland. </p>
     </footer>
     <script src="script.js"></script>
   </body>
