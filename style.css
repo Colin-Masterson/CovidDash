@@ -204,14 +204,14 @@ footer p{
         row-gap: 10px;
         }
 
-        .grid-container-county{
-            display: grid;
-            margin-top: 21px;
-            grid-template-columns: repeat(6,1fr);
-            grid-template-rows: repeat(2,80px);
-            column-gap: 20px;
-            row-gap: 10px;
-            }
+    .grid-container-county{
+        display: grid;
+        margin-top: 21px;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2,80px);
+        column-gap: 20px;
+        row-gap: 10px;
+    }
     
     .latest-cases{
         grid-column: 2/6;
@@ -220,12 +220,12 @@ footer p{
         
         .latest-deaths{
         grid-column: 2/6;
-        grid-row: 2/3;
+        grid-row: 3/4;
         }
         
         .total-cases{
         grid-column: 2/6;
-        grid-row: 3/4;
+        grid-row: 2/3;
         }
         
         .total-deaths{
