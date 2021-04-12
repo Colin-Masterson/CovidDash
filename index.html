@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Description" content="Covid Dashboard for Ireland which shows the latest cases, deaths and totals for all of Ireland and counties">
+    <meta
+      name="Description"
+      content="Covid Dashboard for Ireland which shows the latest cases, deaths and totals for all of Ireland and counties"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="cssreset.css" />
     <link rel="stylesheet" href="style.css" />
     <title>COVID-19 Data | Ireland</title>
@@ -23,8 +31,8 @@
     <main>
       <article class="data daily">
         <div class="data-header">
-        <h1>Ireland's Covid Cases</h1>
-        <p class="latest-date"></p>
+          <h1>Ireland's Covid Cases</h1>
+          <p class="latest-date"></p>
         </div>
         <div class="grid-container">
           <div class="data-box latest-cases">
@@ -47,40 +55,40 @@
       </article>
       <article class="data county">
         <div class="data-header">
-        <h1>Cases By County</h1>
-        <div class="choose-county">
-        <label for="counties">Choose a County:</label>
-        <select id="counties">
-          <option value="carlow">Carlow</option>
-          <option value="cavan">Cavan</option>
-          <option value="clare">Clare</option>
-          <option value="cork">Cork</option>
-          <option value="donegal">Donegal</option>
-          <option value="dublin">Dublin</option>
-          <option value="galway">Galway</option>
-          <option value="kerry">Kerry</option>
-          <option value="kildare">Kildare</option>
-          <option value="kilkenny">Kilkenny</option>
-          <option value="laois">Laois</option>
-          <option value="leitrim">Leitrim</option>
-          <option value="limerick">Limerick</option>
-          <option value="longoford">Longford</option>
-          <option value="louth">Louth</option>
-          <option value="mayo">Mayo</option>
-          <option value="meath">Meath</option>
-          <option value="monaghan">Monaghan</option>
-          <option value="offaly">Offaly</option>
-          <option value="roscommon">Roscommon</option>
-          <option value="sligo">Sligo</option>
-          <option value="tipperary">Tipperary</option>
-          <option value="waterford">Waterford</option>
-          <option value="westmeath">Westmeath</option>
-          <option value="wexford">Wexford</option>
-          <option value="wicklow">Wicklow</option>
-        </select>
-      </div>
-        <p class="latest-date-county"></p>
-      </div>
+          <h1>Cases By County</h1>
+          <div class="choose-county">
+            <label for="counties">Choose a County:</label>
+            <select id="counties">
+              <option value="carlow">Carlow</option>
+              <option value="cavan">Cavan</option>
+              <option value="clare">Clare</option>
+              <option value="cork">Cork</option>
+              <option value="donegal">Donegal</option>
+              <option value="dublin">Dublin</option>
+              <option value="galway">Galway</option>
+              <option value="kerry">Kerry</option>
+              <option value="kildare">Kildare</option>
+              <option value="kilkenny">Kilkenny</option>
+              <option value="laois">Laois</option>
+              <option value="leitrim">Leitrim</option>
+              <option value="limerick">Limerick</option>
+              <option value="longoford">Longford</option>
+              <option value="louth">Louth</option>
+              <option value="mayo">Mayo</option>
+              <option value="meath">Meath</option>
+              <option value="monaghan">Monaghan</option>
+              <option value="offaly">Offaly</option>
+              <option value="roscommon">Roscommon</option>
+              <option value="sligo">Sligo</option>
+              <option value="tipperary">Tipperary</option>
+              <option value="waterford">Waterford</option>
+              <option value="westmeath">Westmeath</option>
+              <option value="wexford">Wexford</option>
+              <option value="wicklow">Wicklow</option>
+            </select>
+          </div>
+          <p class="latest-date-county"></p>
+        </div>
         <div class="grid-container-county">
           <div class="data-box county-cases">
             <h2>New Cases</h2>
@@ -95,8 +103,16 @@
     </main>
     <div class="spacer"></div>
     <footer>
-     <a href="https://covid-19.geohive.ie/datasets/d9be85b30d7748b5b7c09450b8aede63_0?page=980&selectedAttribute=TimeStamp" target="_blank" rel="noopener">Data Source</a>
-     <p>Irish data sourced live from the COVID-19 Open Data Hub provided by the Government of Ireland. </p>
+      <a
+        href="https://covid-19.geohive.ie/datasets/d9be85b30d7748b5b7c09450b8aede63_0?page=980&selectedAttribute=TimeStamp"
+        target="_blank"
+        rel="noopener"
+        >Data Source</a
+      >
+      <p>
+        Irish data sourced live from the COVID-19 Open Data Hub provided by the
+        Government of Ireland.
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
