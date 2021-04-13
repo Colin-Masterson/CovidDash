@@ -1,13 +1,24 @@
-let headerDate = document.querySelector('.todays-date');
-
 window.onload = () => {
+  getDate();
+  fetchLatestCases();
+  fetchCountyCases('Carlow');
+  fetchVaccineData();
+};
+
+const selecter = document.getElementById('counties');
+
+selecter.addEventListener('change', (e) => {
+  let county = e.target.value;
+  fetchCountyCases(county);
+});
+
+const getDate = () => {
+  let headerDate = document.querySelector('.todays-date');
   let today = new Date();
   let date =
     today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 
   headerDate.textContent = date;
-  fetchLatestCases();
-  fetchCountyCases(county);
 };
 
 const fetchLatestCases = async () => {
@@ -41,15 +52,6 @@ const fetchLatestCases = async () => {
   ).textContent = totalDeaths.toLocaleString();
 };
 
-const selecter = document.getElementById('counties');
-
-selecter.addEventListener('change', (e) => {
-  let county = e.target.value;
-  fetchCountyCases(county);
-});
-
-let county = 'carlow';
-
 const fetchCountyCases = async (c) => {
   let api = `https://services1.arcgis.com/eNO7HHeQ3rUcBllm/arcgis/rest/services/Covid19CountyStatisticsHPSCIreland/FeatureServer/0/query?where=CountyName%20%3D%20%27${c}%27&outFields=CountyName,ConfirmedCovidCases,ConfirmedCovidDeaths,TimeStamp&returnGeometry=false&outSR=4326&f=json`;
 
@@ -75,4 +77,13 @@ const fetchCountyCases = async (c) => {
   document.querySelector(
     '.testtotal'
   ).textContent = totalCases.toLocaleString();
+};
+
+const fetchVaccineData = async () => {
+  let vaccineData = await fetch(
+    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false&outStatistics=%5B%7B%22onStatisticField%22%3A%22firstDose%22%2C%22outStatisticFieldName%22%3A%22firstDose_max%22%2C%22statisticType%22%3A%22max%22%7D%5D'
+  );
+  let vaccinejson = await vaccineData.json();
+  let total = await vaccinejson.features[0].attributes.firstDose_max;
+  console.log(total.toLocaleString());
 };
