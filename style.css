@@ -121,6 +121,62 @@ main {
   column-gap: 20px;
 }
 
+.grid-container-vaccines {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 80px);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.grid-container-breakdown {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 80px);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.vaccines {
+  margin-bottom: 40px;
+}
+
+.breakdown {
+  margin-bottom: 40px;
+}
+
+.pfizer {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.moderna {
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+
+.astrazeneca {
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+
+.first-dose {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.second-dose {
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+
+.total-dose {
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+
 .data-box {
   background-color: #eee;
   border: 1px solid #d6d6d6;
@@ -195,20 +251,11 @@ footer p {
   }
 
   .grid-container {
-    display: grid;
-    margin-top: 20px;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 80px);
-    column-gap: 20px;
-    row-gap: 10px;
   }
 
   .grid-container-county {
-    display: grid;
-    margin-top: 21px;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 80px);
-    column-gap: 20px;
     row-gap: 10px;
   }
 
@@ -248,6 +295,10 @@ footer p {
     align-items: center;
   }
 
+  .data-header h1 {
+    text-align: center;
+  }
+
   .choose-county {
     text-align: center;
     margin: 5px 0 5px 0;
@@ -259,5 +310,43 @@ footer p {
 
   .data-box {
     text-align: center;
+  }
+
+  .grid-container-vaccines {
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .first-dose {
+    grid-column: 2/6;
+    grid-row: 1/2;
+  }
+
+  .second-dose {
+    grid-column: 2/6;
+    grid-row: 2/3;
+  }
+
+  .total-dose {
+    grid-column: 2/6;
+    grid-row: 3/4;
+  }
+
+  .grid-container-breakdown {
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .pfizer {
+    grid-column: 2/6;
+    grid-row: 1/2;
+  }
+
+  .moderna {
+    grid-column: 2/6;
+    grid-row: 2/3;
+  }
+
+  .astrazeneca {
+    grid-column: 2/6;
+    grid-row: 3/4;
   }
 }

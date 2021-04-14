@@ -2,7 +2,10 @@ window.onload = () => {
   getDate();
   fetchLatestCases();
   fetchCountyCases('Carlow');
-  fetchVaccineData();
+  getFirstDose();
+  getSecondDose();
+  getTotalDose();
+  getVaccineBreakdown();
 };
 
 const selecter = document.getElementById('counties');
@@ -79,11 +82,55 @@ const fetchCountyCases = async (c) => {
   ).textContent = totalCases.toLocaleString();
 };
 
-const fetchVaccineData = async () => {
-  let vaccineData = await fetch(
-    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false&outStatistics=%5B%7B%22onStatisticField%22%3A%22firstDose%22%2C%22outStatisticFieldName%22%3A%22firstDose_max%22%2C%22statisticType%22%3A%22max%22%7D%5D'
-  );
-  let vaccinejson = await vaccineData.json();
-  let total = await vaccinejson.features[0].attributes.firstDose_max;
-  console.log(total.toLocaleString());
+const getFirstDose = async () => {
+  const api =
+    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false&outStatistics=%5B%7B%22onStatisticField%22%3A%22firstDose%22%2C%22outStatisticFieldName%22%3A%22firstDose_max%22%2C%22statisticType%22%3A%22max%22%7D%5D';
+  let fetchData = await fetch(api);
+  let jsonData = await fetchData.json();
+  let firstDose = await jsonData.features[0].attributes.firstDose_max;
+
+  document.querySelector(
+    '.vaccine-one'
+  ).textContent = firstDose.toLocaleString();
+};
+
+const getSecondDose = async () => {
+  const api =
+    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false&outStatistics=%5B%7B%22onStatisticField%22%3A%22secondDose%22%2C%22outStatisticFieldName%22%3A%22secondDose_max%22%2C%22statisticType%22%3A%22max%22%7D%5D';
+  let fetchData = await fetch(api);
+  let jsonData = await fetchData.json();
+  let secondDose = await jsonData.features[0].attributes.secondDose_max;
+
+  document.querySelector(
+    '.vaccine-two'
+  ).textContent = secondDose.toLocaleString();
+};
+
+const getTotalDose = async () => {
+  const api =
+    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false&outStatistics=%5B%7B%22onStatisticField%22%3A%22totalAdministered%22%2C%22outStatisticFieldName%22%3A%22totalAdministered_max%22%2C%22statisticType%22%3A%22max%22%7D%5D';
+  let fetchData = await fetch(api);
+  let jsonData = await fetchData.json();
+  let totalDose = await jsonData.features[0].attributes.totalAdministered_max;
+
+  document.querySelector(
+    '.vaccine-total'
+  ).textContent = totalDose.toLocaleString();
+};
+
+const getVaccineBreakdown = async () => {
+  const api =
+    'https://services-eu1.arcgis.com/z6bHNio59iTqqSUY/arcgis/rest/services/Covid19_Vaccine_Administration_Hosted_View/FeatureServer/0/query?f=json&cacheHint=true&outFields=*&outStatistics=%5B%7B%22onStatisticField%22%3A%22pf%22%2C%22outStatisticFieldName%22%3A%22pf%22%2C%22statisticType%22%3A%22max%22%7D%2C%7B%22onStatisticField%22%3A%22modern%22%2C%22outStatisticFieldName%22%3A%22modern%22%2C%22statisticType%22%3A%22max%22%7D%2C%7B%22onStatisticField%22%3A%22az%22%2C%22outStatisticFieldName%22%3A%22az%22%2C%22statisticType%22%3A%22max%22%7D%5D&resultType=standard&returnGeometry=false&spatialRel=esriSpatialRelIntersects&where=1%3D1';
+
+  let fetchData = await fetch(api);
+  let jsonData = await fetchData.json();
+  let pz = await jsonData.features[0].attributes.pf;
+  let md = await jsonData.features[0].attributes.modern;
+  let az = await jsonData.features[0].attributes.az;
+
+  document.querySelector('.vaccine-pfizer').textContent = pz.toLocaleString();
+  document.querySelector('.vaccine-moderna').textContent = md.toLocaleString();
+  document.querySelector(
+    '.vaccine-astrazeneca'
+  ).textContent = az.toLocaleString();
 };
