@@ -313,7 +313,7 @@ footer p {
   }
 
   .grid-container-vaccines {
-    grid-template-rows: repeat(3, 80px);
+    grid-template-rows: repeat(3, 90px);
   }
 
   .first-dose {
