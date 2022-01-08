@@ -1,12 +1,12 @@
 html {
-  box-sizing: border-box;
-  font-family: 'Noto Sans SC', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Noto Sans SC', sans-serif;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 h1,
@@ -15,338 +15,338 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 5px 0;
+    margin: 0 0 5px 0;
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 header {
-  width: 100%;
-  height: 75px;
-  background-color: #006857;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 30px;
+    width: 100%;
+    height: 75px;
+    background-color: #006857;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
 }
 
 header a {
-  color: white;
-  font-size: 26px;
+    color: white;
+    font-size: 26px;
 }
 
 .logo {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 22px;
+    font-weight: 400;
+    font-size: 22px;
 }
 
 h2 {
-  font-weight: 200;
-  font-size: 18px;
+    font-weight: 200;
+    font-size: 18px;
 }
 
 .data-box p {
-  font-weight: 450;
-  font-size: 30px;
-  margin: 0;
-  display: inline-block;
+    font-weight: 450;
+    font-size: 30px;
+    margin: 0;
+    display: inline-block;
 }
 
 .latest-cases p {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .latest-deaths p {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 main {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .data {
-  display: flex;
-  flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 10px;
-  padding: 15px 0 21px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 15px 0 21px 0;
 }
 
 .daily {
-  margin-top: 40px;
-  margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .county {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .data-header {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .grid-container {
-  display: grid;
-  margin-top: 20px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 80px);
-  column-gap: 20px;
-  row-gap: 10px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 80px);
+    column-gap: 20px;
+    row-gap: 10px;
 }
 
 .grid-container-county {
-  display: grid;
-  margin-top: 21px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 80px;
-  column-gap: 20px;
+    display: grid;
+    margin-top: 21px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px;
+    column-gap: 20px;
 }
 
 .grid-container-vaccines {
-  display: grid;
-  margin-top: 20px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 80px);
-  column-gap: 20px;
-  row-gap: 10px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 80px);
+    column-gap: 20px;
+    row-gap: 10px;
 }
 
 .grid-container-breakdown {
-  display: grid;
-  margin-top: 20px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 80px);
-  column-gap: 20px;
-  row-gap: 10px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 80px);
+    column-gap: 20px;
+    row-gap: 10px;
 }
 
 .vaccines {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .breakdown {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .pfizer {
-  grid-column: 2/4;
-  grid-row: 1/2;
+    grid-column: 2/4;
+    grid-row: 1/2;
 }
 
 .moderna {
-  grid-column: 4/6;
-  grid-row: 1/2;
+    grid-column: 4/6;
+    grid-row: 1/2;
 }
 
 .astrazeneca {
-  grid-column: 3/5;
-  grid-row: 2/3;
+    grid-column: 3/5;
+    grid-row: 2/3;
 }
 
 .first-dose {
-  grid-column: 2/4;
-  grid-row: 1/2;
+    grid-column: 2/4;
+    grid-row: 1/2;
 }
 
 .second-dose {
-  grid-column: 4/6;
-  grid-row: 1/2;
+    grid-column: 4/6;
+    grid-row: 1/2;
 }
 
 .total-dose {
-  grid-column: 3/5;
-  grid-row: 2/3;
+    grid-column: 3/5;
+    grid-row: 2/3;
 }
 
 .data-box {
-  background-color: #eee;
-  border: 1px solid #d6d6d6;
-  border-radius: 10px;
-  padding: 10px;
+    background-color: #eee;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .latest-cases {
-  grid-column: 2/4;
-  grid-row: 1/2;
+    grid-column: 3/5;
+    grid-row: 1/2;
 }
 
 .latest-deaths {
-  grid-column: 4/6;
-  grid-row: 1/2;
+    grid-column: 4/6;
+    grid-row: 1/2;
 }
 
 .total-cases {
-  grid-column: 2/4;
-  grid-row: 2/3;
+    grid-column: 2/4;
+    grid-row: 2/3;
 }
 
 .total-deaths {
-  grid-column: 4/6;
-  grid-row: 2/3;
+    grid-column: 4/6;
+    grid-row: 2/3;
 }
 
 .county-cases {
-  grid-column: 2/4;
+    grid-column: 2/4;
 }
 
 .county-total {
-  grid-column: 4/6;
+    grid-column: 4/6;
 }
 
 .spacer {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 footer {
-  width: 100%;
-  height: 70px;
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-footer a {
-  color: #4b4c4d;
-}
-
-footer p {
-  margin-top: 5px;
-  color: #4b4c4d;
-  font-size: 13px;
-  text-align: center;
-}
-
-.latest-date {
-  font-weight: 750;
-}
-
-.latest-date-county {
-  font-weight: 750;
-}
-
-@media (max-width: 640px) {
-  header a {
-    font-size: 20px;
-  }
-
-  .grid-container {
-    grid-template-rows: repeat(4, 80px);
-  }
-
-  .grid-container-county {
-    grid-template-rows: repeat(2, 80px);
-    row-gap: 10px;
-  }
-
-  .latest-cases {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
-
-  .latest-deaths {
-    grid-column: 2/6;
-    grid-row: 3/4;
-  }
-
-  .total-cases {
-    grid-column: 2/6;
-    grid-row: 2/3;
-  }
-
-  .total-deaths {
-    grid-column: 2/6;
-    grid-row: 4/5;
-  }
-
-  .county-cases {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
-
-  .county-total {
-    grid-column: 2/6;
-    grid-row: 2/3;
-  }
-
-  .data-header {
+    width: 100%;
+    height: 70px;
+    background-color: #f0f0f0;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .data-header h1 {
+footer a {
+    color: #4b4c4d;
+}
+
+footer p {
+    margin-top: 5px;
+    color: #4b4c4d;
+    font-size: 13px;
     text-align: center;
-  }
+}
 
-  .choose-county {
-    text-align: center;
-    margin: 5px 0 5px 0;
-  }
+.latest-date {
+    font-weight: 750;
+}
 
-  main {
-    width: 90%;
-  }
+.latest-date-county {
+    font-weight: 750;
+}
 
-  .data-box {
-    text-align: center;
-  }
+@media (max-width: 640px) {
+    header a {
+        font-size: 20px;
+    }
 
-  .grid-container-vaccines {
-    grid-template-rows: repeat(3, 90px);
-  }
+    .grid-container {
+        grid-template-rows: repeat(3, 80px);
+    }
 
-  .first-dose {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
+    .grid-container-county {
+        grid-template-rows: repeat(2, 80px);
+        row-gap: 10px;
+    }
 
-  .second-dose {
-    grid-column: 2/6;
-    grid-row: 2/3;
-  }
+    .latest-cases {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
 
-  .total-dose {
-    grid-column: 2/6;
-    grid-row: 3/4;
-  }
+    .latest-deaths {
+        grid-column: 2/6;
+        grid-row: 3/4;
+    }
 
-  .grid-container-breakdown {
-    grid-template-rows: repeat(3, 80px);
-  }
+    .total-cases {
+        grid-column: 2/6;
+        grid-row: 2/3;
+    }
 
-  .pfizer {
-    grid-column: 2/6;
-    grid-row: 1/2;
-  }
+    .total-deaths {
+        grid-column: 2/6;
+        grid-row: 3/4;
+    }
 
-  .moderna {
-    grid-column: 2/6;
-    grid-row: 2/3;
-  }
+    .county-cases {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
 
-  .astrazeneca {
-    grid-column: 2/6;
-    grid-row: 3/4;
-  }
+    .county-total {
+        grid-column: 2/6;
+        grid-row: 2/3;
+    }
+
+    .data-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data-header h1 {
+        text-align: center;
+    }
+
+    .choose-county {
+        text-align: center;
+        margin: 5px 0 5px 0;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .data-box {
+        text-align: center;
+    }
+
+    .grid-container-vaccines {
+        grid-template-rows: repeat(3, 90px);
+    }
+
+    .first-dose {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
+
+    .second-dose {
+        grid-column: 2/6;
+        grid-row: 2/3;
+    }
+
+    .total-dose {
+        grid-column: 2/6;
+        grid-row: 3/4;
+    }
+
+    .grid-container-breakdown {
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .pfizer {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
+
+    .moderna {
+        grid-column: 2/6;
+        grid-row: 2/3;
+    }
+
+    .astrazeneca {
+        grid-column: 2/6;
+        grid-row: 3/4;
+    }
 }
